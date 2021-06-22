@@ -47,31 +47,67 @@
             </div>
         </head>
         <section id="Sobre">
-            <div class="container">
-                <div class="">
-                    <div class="spin">
-                        <div class="large circle one"></div>
-                        <div class="large circle two"></div>
-                        <div class="large circle three"></div>
-                        <div class="large circle four"></div>
-                        <div class="large circle five"></div>
-                        <div class="large circle six"></div>
-                        <div class="large circle seven"></div>
-                        <div class="large circle eight"></div>
-                    </div>
-                </div>
+            <div class="block">
+                <span class="spin">
+                    <div class="large circle one"></div>
+                    <div class="large circle two"></div>
+                    <div class="large circle three"></div>
+                    <div class="large circle four"></div>
+                    <div class="large circle five"></div>
+                    <div class="large circle six"></div>
+                    <div class="large circle seven"></div>
+                    <div class="large circle eight"></div>
+                </span>
+                <span class="pulse">
+                    <div class="small circle one"></div>
+                    <div class="small squircle two"></div>
+                    <div class="small circle three"></div>
+                    <div class="small squircle four"></div>
+                    <div class="small circle five"></div>
+                    <div class="small squircle six"></div>
+                    <div class="small circle seven"></div>
+                    <div class="small squircle eight"></div>
+                </span>
+            
             </div>
         </section>
         <style type="text/css">
-            .spin {
-                display: block;
-                animation: spin 10s linear infinite;
+            #Sobre {
+                width: 100vw;
+                height: calc(100vh - 52px);
+                position: relative;
+                overflow: hidden;
+            }
+            #Sobre span {
                 width: 25em;
                 height: 25em;
                 position: absolute;
-                top: calc(50% - 6em);
-                left: calc(50% - 10em);
+                margin: auto;
+                top: calc(50% - 10em);
+  left: calc(50% - 10em);
+                display: block;
             }
+
+            .spin {
+                
+                animation: spin 10s linear infinite;
+                
+            }
+            .pulse {
+                animation: spin-pulse 20s linear infinite;
+            }
+            @keyframes spin-pulse {
+                0% {
+                    transform: scale(1.1) rotateZ(0);
+                }
+                50% {
+                    transform: scale(0.9) rotateZ(180deg);
+                }
+                100% {
+                    transform: scale(1.1) rotateZ(360deg);
+                }
+            }
+
             @keyframes spin {
                 0% {
                     transform: rotateZ(0);
@@ -121,11 +157,22 @@ transform: rotateZ(-45deg);
 background: rgba(95, 33, 203, 0.75);
 transform: rotateZ(-90deg);
 }
+.squircle {
+  border-radius: 25%;
+}
             .circle, .squircle {
                 width: 15.5em;
                 height: 15.5em;
                 position: absolute;
                 border-top: 0.1em solid rgba(255,255,255,0.4);
+            }
+            .small {
+    width: 5em;
+    height: 5em;
+    left: calc(50% - 2.5em);
+    top: calc(50% - 18em);
+    transform-origin: 50% 18em;
+    box-shadow: 0 0.25em 0.5em rgb(0 0 0 / 20%);
             }
         </style>
     </body>
