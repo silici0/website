@@ -68,10 +68,70 @@
                     <div class="small circle seven"></div>
                     <div class="small squircle eight"></div>
                 </span>
-            
+                <span class="spin-reverse">
+                    <div class="large squircle one"></div>
+                </span>
+                <div class="detail large squircle two">
+                    <div class="content">
+                        <h1>Rafael Cunha</h1>
+                        <h2>Analista / Desenvolvedor</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="wave">
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(16,143,236,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(16,143,236,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(16,143,236,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#103FEC" />
+                    </g>
+                </svg>
             </div>
         </section>
         <style type="text/css">
+
+            .waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+            .parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
             #Sobre {
                 width: 100vw;
                 height: calc(100vh - 52px);
@@ -84,10 +144,36 @@
                 position: absolute;
                 margin: auto;
                 top: calc(50% - 10em);
-  left: calc(50% - 10em);
+                left: calc(50% - 10em);
                 display: block;
             }
-
+            span.spin-reverse {
+                animation: spin 30s linear infinite;
+            }
+            .large.squircle {
+                position: absolute;
+                background: rgba(30, 7, 66, 0.65);
+                border: none;
+                left: calc(50% - 10em);
+                top: calc(50% - 10em);
+                width: 20em;
+                height: 20em;
+                transform: none;
+            }
+            .detail.large.squircle {
+                left: calc(50% - 7.5em);
+                top: calc(50% - 7.5em);
+            }
+            .detail .content {
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                align-items: center;
+            }
+            .detail .content h1 {
+                color: white;
+                font-size: 45px;
+            }
             .spin {
                 
                 animation: spin 10s linear infinite;
