@@ -19,33 +19,32 @@
         </style>
     </head>
     <body>
-        <head>
-            <div class="container is-fluid">
-                <nav class="navbar" role="navigation" aria-label="main navigation">
-                    <div class="navbar-brand">
-                        <a href="/" class="navbar-item">
-                            <p class="logo">Rafael Cunha</p>
+        <section id="head">
+        
+            <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="/" class="navbar-item">
+                        <p class="logo">Rafael Cunha</p>
+                    </a>
+                </div>
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="#" class="navbar-item">
+                            Sobre
+                        </a>
+                        <a href="#" class="navbar-item">
+                            Skillz
+                        </a>
+                        <a href="#" class="navbar-item">
+                            Blog
+                        </a>
+                        <a href="#" class="navbar-item">
+                            Contato
                         </a>
                     </div>
-                    <div id="navbarBasicExample" class="navbar-menu">
-                        <div class="navbar-end">
-                            <div class="navbar-item">
-                                Sobre
-                            </div>
-                            <div class="navbar-item">
-                                Skillz
-                            </div>
-                            <div class="navbar-item">
-                                Blog
-                            </div>
-                            <div class="navbar-item">
-                                Contato
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </head>
+                </div>
+            </nav>
+        </section>
         <section id="Sobre">
             <div class="block">
                 <span class="spin">
@@ -87,179 +86,213 @@
                         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                     </defs>
                     <g class="parallax">
-                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(16,143,236,0.7" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(16,143,236,0.5)" />
-                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(16,143,236,0.3)" />
-                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#103FEC" />
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(149,97,232,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(149,97,232,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(149,97,232,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#9561E8" />
                     </g>
                 </svg>
             </div>
         </section>
-        <style type="text/css">
-
-            .waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
-            .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
-            #Sobre {
-                width: 100vw;
-                height: calc(100vh - 52px);
-                position: relative;
-                overflow: hidden;
-            }
-            #Sobre span {
-                width: 25em;
-                height: 25em;
-                position: absolute;
-                margin: auto;
-                top: calc(50% - 10em);
-                left: calc(50% - 10em);
-                display: block;
-            }
-            span.spin-reverse {
-                animation: spin 30s linear infinite;
-            }
-            .large.squircle {
-                position: absolute;
-                background: rgba(30, 7, 66, 0.65);
-                border: none;
-                left: calc(50% - 10em);
-                top: calc(50% - 10em);
-                width: 20em;
-                height: 20em;
-                transform: none;
-            }
-            .detail.large.squircle {
-                left: calc(50% - 7.5em);
-                top: calc(50% - 7.5em);
-            }
-            .detail .content {
-                display: flex;
-                justify-content: center;
-                height: 100%;
-                align-items: center;
-            }
-            .detail .content h1 {
-                color: white;
-                font-size: 45px;
-            }
-            .spin {
-                
-                animation: spin 10s linear infinite;
-                
-            }
-            .pulse {
-                animation: spin-pulse 20s linear infinite;
-            }
-            @keyframes spin-pulse {
-                0% {
-                    transform: scale(1.1) rotateZ(0);
-                }
-                50% {
-                    transform: scale(0.9) rotateZ(180deg);
-                }
-                100% {
-                    transform: scale(1.1) rotateZ(360deg);
-                }
-            }
-
-            @keyframes spin {
-                0% {
-                    transform: rotateZ(0);
-                }
-                100% {
-                    transform: rotateZ(360deg);
-                }
-            }
-            .circle {
-                border-radius: 50%;
-                left: calc(50% - 8em);
-                top: calc(50% - 16.7em);
-                transform-origin: 50% 16.5em;
-            }
-            .large.circle {
-                box-shadow: 0 1em 2em rgba(0,0,0,0.5);
-            }
-.one {
-background: rgba(16, 63, 236, 0.75);
-transform: rotateZ(225deg);
-}
-.two {
-background: rgba(37, 172, 162, 0.75);
-transform: rotateZ(180deg);
-}
-.three {
-background: rgba(233, 124, 32, 0.75);
-transform: rotateZ(135deg);
-}
-.four {
-background: rgba(235, 67, 35, 0.75);
-transform: rotateZ(90deg);
-}
-.five {
-background: rgba(190, 28, 65, 0.75);
-transform: rotateZ(45deg);
-}
-.six {
-background: rgba(208, 57, 159, 0.75);
-transform: rotateZ(0);
-}
-.seven {
-background: rgba(150, 32, 198, 0.75);
-transform: rotateZ(-45deg);
-}
-.eight {
-background: rgba(95, 33, 203, 0.75);
-transform: rotateZ(-90deg);
-}
-.squircle {
-  border-radius: 25%;
-}
-            .circle, .squircle {
-                width: 15.5em;
-                height: 15.5em;
-                position: absolute;
-                border-top: 0.1em solid rgba(255,255,255,0.4);
-            }
-            .small {
-    width: 5em;
-    height: 5em;
-    left: calc(50% - 2.5em);
-    top: calc(50% - 18em);
-    transform-origin: 50% 18em;
-    box-shadow: 0 0.25em 0.5em rgb(0 0 0 / 20%);
-            }
-        </style>
+        <section id="about">
+            <div class="container">
+                <div class="content">
+                    <div class="block">
+                        <br />
+                        <h1 class="title">Sobre</h1>
+                    </div>
+                    <div class="block">
+                        <br />
+                        <h2>Rafael Cunha, analista/programador (full-stack web developer).</h2>
+                        <br />
+                        <p>Programador com experiencia de 10 anos + em PHP, backEnd, frontEnd. Aplicações em frameworks como wordpress, CI, Laravel, CakePHP, consumo e desenvolvimentos de API, webservices, git, jenkins, CI/CD, analise com prevenção de falhas, dashboards, configuração de pixel, GTM e campanhas.</p> 
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skill">
+            <div class="container">
+                <div class="content">
+                    <div class="block">
+                        <br />
+                        <h1>Skills</h1>
+                    </div>
+                    <div class="block">
+                        <br />
+                        <h2>Programação</h2>
+                        <br />
+                        <p>Projetos de manutenção e desenvolvimentos de website, admin dashboards, ecommerce, landing pages com diversas linguagens e tecnologias.</p>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-php.png" alt="PHP">
+                                <p>PHP</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-html.png" alt="HTML">
+                                <p>HTML</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-laravel.png" alt="Laravel">
+                                <p>Laravel</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-javascript.png" alt="Javascript">
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-vuejs.png" alt="VueJS">
+                                <p>VueJs</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-webpack.png" alt="Webpack">
+                                <p>Webpack</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-sass.png" alt="SASS">
+                                <p>SASS</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-vtex.png" alt="VTEX">
+                                <p>VTEX</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-cakephp.png" alt="CakePHP">
+                                <p>CakePHP</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-bitbucket.png" alt="Bitbucket">
+                                <p>Bitbucket</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-bootstrap.png" alt="Bootstrap">
+                                <p>Bootstrap</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-git.png" alt="GIT">
+                                <p>GIT</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-python.png" alt="Python">
+                                <p>Python</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/mysql-icon.png" alt="Mysql">
+                                <p>Mysql</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/bulma-icon.png" alt="Bulma">
+                                <p>Bulma</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <br />
+                        <h2>Softwares</h2>
+                        <br />
+                        <p>Configuração de pixels, campanhas, software para análise e controles, além de integração e gerenciamento configurações de software.</p>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-ads.png" alt="Adwords">
+                                <p>Google Adwords</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-analytics.png" alt="Analytics">
+                                <p>Google Analytics</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-datastudio.png" alt="DataStudio">
+                                <p>Google DataStudio</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-gtm.png" alt="GTM">
+                                <p>Google GTM</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-meetime.png" alt="Meetime">
+                                <p>Meetime</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-pipedrive.png" alt="Pipedrive">
+                                <p>Pipedrive</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-rd.png" alt="RDStation">
+                                <p>RDStation</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-facebook.png" alt="Facebook">
+                                <p>Facebook</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-merchant.png" alt="Merchant Center">
+                                <p>Merchant Center</p>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="box">
+                                <img src="/img/icon-rollbar.png" alt="Rollbar">
+                                <p>Rollbar</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
