@@ -20,30 +20,31 @@
     </head>
     <body>
         <section id="head">
-        
-            <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a href="/" class="navbar-item">
-                        <p class="logo">Rafael Cunha</p>
-                    </a>
-                </div>
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a href="#" class="navbar-item">
-                            Sobre
-                        </a>
-                        <a href="#" class="navbar-item">
-                            Skillz
-                        </a>
-                        <a href="#" class="navbar-item">
-                            Blog
-                        </a>
-                        <a href="#" class="navbar-item">
-                            Contato
+            <div class="container">
+                <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+                    <div class="navbar-brand">
+                        <a href="/" class="navbar-item">
+                            <p class="logo">Rafael Cunha</p>
                         </a>
                     </div>
-                </div>
-            </nav>
+                    <div id="navbarBasicExample" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="#" class="navbar-item">
+                                Sobre
+                            </a>
+                            <a href="#" class="navbar-item">
+                                Skillz
+                            </a>
+                            <a href="#" class="navbar-item">
+                                Blog
+                            </a>
+                            <a href="#" class="navbar-item">
+                                Contato
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </section>
         <section id="Sobre">
             <div class="block">
@@ -290,6 +291,47 @@
                             </div>
                         </div>
                         
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blog">
+            <div class="container">
+                <div class="content">
+                    <div class="block">
+                        <h1>Blog</h1>
+                        <p>Em construção</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="container">
+                <div class="content">
+                    <div class="block">
+                        <h1>Contato</h1>
+                        <p>Entre em contato:</p>
+                        <form>
+                            <div class="field">
+                                <label for="name" class="label">Nome</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="name" pattern="^([A-zÀ-ÖØ-öø-ÿ ]+){3}*$" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="whatsapp" class="label">Whatsapp</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="whatsapp" pattern="(\([1-9]{2}\)\s9[0-9]{4}-[0-9]{4})|((\([1-9]{2}\)) (?!9)[0-9]{4}-[0-9]{4})" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <textarea class="textarea" placeholder="Mensagem" required></textarea>
+                            </div>
+                            <div class="field">
+                                <input class="button" type="submit" value="Enviar">
+                            </div>
+                            
+                        </form>
                     </div>
                 </div>
             </div>

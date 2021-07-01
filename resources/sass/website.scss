@@ -1,5 +1,10 @@
 @import "~bulma/bulma";
 
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 #head {
 	.navbar {
 		background-color: rgba(30, 7, 66, 0.65);
@@ -226,4 +231,17 @@
         flex-flow: column;
         justify-content: center;
     }
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+}
+#blog {
+    padding-top:  40px;
+    padding-bottom: 40px;
+}
+#contato {
+    padding-top:  40px;
+    padding-bottom: 40px;
 }
