@@ -1,3 +1,5 @@
+$family-sans-serif: 'Helvetica', 'Arial', sans-serif;
+
 @import "~bulma/bulma";
 
 
@@ -20,6 +22,16 @@
 		}
 	}
 }
+footer {
+    margin-top:40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(30, 7, 66, 0.65);
+    p {
+        color: #fff;
+    }
+}
+
 
 #Sobre {
 	width: 100vw;
@@ -31,8 +43,8 @@
         height: 25em;
         position: absolute;
         margin: auto;
-        top: calc(50% - 10em);
-        left: calc(50% - 10em);
+        top: calc(50% - 12.5em);
+        left: calc(50% - 12.5em);
         display: block;
 	}
 	span.spin-reverse {
@@ -51,8 +63,8 @@
         }
     }
     .detail.large.squircle {
-        left: calc(50% - 7.5em);
-        top: calc(50% - 7.5em);
+        left: calc(50% - 10em);
+        top: calc(50% - 10em);
     }
     .detail .content {
         display: flex;

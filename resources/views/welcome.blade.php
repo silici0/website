@@ -9,8 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         
-        <link rel="preload" href="/css/website.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="website.css"></noscript>
+        <link rel="preload" href="{{ asset('css/website.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ asset('css/website.css') }}"></noscript>
 
         <style>
             body {
@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div id="navbarBasicExample" class="navbar-menu">
-                        <div class="navbar-end">
+                        <!-- <div class="navbar-end">
                             <a href="#" class="navbar-item">
                                 Sobre
                             </a>
@@ -41,7 +41,7 @@
                             <a href="#" class="navbar-item">
                                 Contato
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </nav>
             </div>
@@ -108,6 +108,17 @@
                         <br />
                         <p>Programador com experiencia de 10 anos + em PHP, backEnd, frontEnd. Aplicações em frameworks como wordpress, CI, Laravel, CakePHP, consumo e desenvolvimentos de API, webservices, git, jenkins, CI/CD, analise com prevenção de falhas, dashboards, configuração de pixel, GTM e campanhas.</p> 
                         <br />
+                        <div class="links">
+                            <a href="https://br.linkedin.com/in/rafael-cunha">
+                                <img src="/img/icons8-linkedin-48.png" class="" alt="icone linkedin" />
+                            </a>
+                            <a href="https://github.com/silici0">
+                                <img src="/img/icons8-github-48.png" class="" alt="icone github" />
+                            </a>
+                            <a href="https://rafacunha.com.br/blog">
+                                <img src="/img/icons8-wordpress-48.png" class="" alt="icone wordpress" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,7 +322,8 @@
                     <div class="block">
                         <h1>Contato</h1>
                         <p>Entre em contato:</p>
-                        <form>
+                        <form method="POST" action="{{ route('envia-contato') }}">
+                            @csrf
                             <div class="field">
                                 <label for="name" class="label">Nome</label>
                                 <div class="control">
@@ -321,14 +333,14 @@
                             <div class="field">
                                 <label for="whatsapp" class="label">Whatsapp</label>
                                 <div class="control">
-                                    <input class="input" type="text" name="whatsapp" pattern="(\([1-9]{2}\)\s9[0-9]{4}-[0-9]{4})|((\([1-9]{2}\)) (?!9)[0-9]{4}-[0-9]{4})" required>
+                                    <input class="input" type="text" name="whatsapp" pattern="(\([1-9]{2}\)\s9[0-9]{4}-[0-9]{4})|((\([1-9]{2}\)) (?!9)[0-9]{4}-[0-9]{4})" placeholder="Ex. (11) 99999-9999" required>
                                 </div>
                             </div>
                             <div class="field">
                                 <textarea class="textarea" placeholder="Mensagem" required></textarea>
                             </div>
                             <div class="field">
-                                <input class="button" type="submit" value="Enviar">
+                                <input class="button" name="msg" type="submit" value="Enviar">
                             </div>
                             
                         </form>
@@ -336,5 +348,34 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="container">
+                <div class="content">
+                    <div class="block">
+                        <p class="small">Copyright © 2021 Rafael Cunha</p>
+                    </div>
+                    <div clss="block">
+                        <a href="https://bulma.io">
+                          <img
+                            src="https://bulma.io/images/made-with-bulma.png"
+                            alt="Made with Bulma"
+                            width="128"
+                            height="24">
+                        </a>
+                    </div>
+                </div>                          
+            </div>
+        </footer>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function(){
+                var btnWhats = document.getElementsByName('whatsapp');
+                btnWhats[0].addEventListener("keyup", function(e) {
+                    var t = this.value;
+                    t = (t = (t = t.replace(/\D/g, "")).replace(/^(\d{2})(\d)/g, "($1) $2")).replace(/(\d)(\d{4})$/, "$1-$2"),
+                    this.value = t
+                })
+            }, false);
+            
+        </script>
     </body>
 </html>
