@@ -17,5 +17,6 @@ use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('/tpok', 'tpok')->name('tpok');
 
 Route::post('/envia-contato', [PostController::class, 'enviaContato'])->name('envia-contato');

@@ -36,7 +36,7 @@
 		</td>
 		<td width="295" bgcolor="#f4f4f4">
 			<font  size="2" face="Verdana">
-				{{ $lead['msg'] }}
+				{!! nl2br($lead['msg']) !!}
 			</font>
 		</td>
 	</tr>

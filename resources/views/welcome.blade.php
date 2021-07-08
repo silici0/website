@@ -337,10 +337,10 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <textarea class="textarea" placeholder="Mensagem" required></textarea>
+                                <textarea class="textarea" name="msg" placeholder="Mensagem" required></textarea>
                             </div>
                             <div class="field">
-                                <input class="button" name="msg" type="submit" value="Enviar">
+                                <input class="button"  type="submit" value="Enviar">
                             </div>
                             
                         </form>
