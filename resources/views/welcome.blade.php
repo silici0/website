@@ -17,8 +17,19 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P6QR2BL');</script>
+        <!-- End Google Tag Manager -->
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6QR2BL"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <section id="head">
             <div class="container">
                 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -118,7 +129,11 @@
                             <a href="https://rafacunha.com.br/blog">
                                 <img src="/img/icons8-wordpress-48.png" class="" alt="icone wordpress" />
                             </a>
+                            <a href="https://rafacunha.com.br/blog">
+                                <img src="/img/youtube_icon_48.png" class="" alt="icone youtube" />
+                            </a>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -311,7 +326,16 @@
                 <div class="content">
                     <div class="block">
                         <h1>Blog</h1>
-                        <p>Em construção</p>
+                        <p>Últimos posts:</p>
+                        <div class="blocos">
+                            @foreach($feed as $post)
+                                <a href="{{ $post['link'] }}">
+                                    <h3>{{ $post['title']}}</h3>
+                                    <p><?php echo substr(strip_tags($post['description']), 0, strrpos(strip_tags($post['description']), " ", -(strlen(strip_tags($post['description'])) - 280)) ); ?>... </p>
+                                </a>
+                                <br/> <br/>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
